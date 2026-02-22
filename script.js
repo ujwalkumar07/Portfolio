@@ -59,4 +59,22 @@ function draw(){
     });
     requestAnimationFrame(draw);
 }
+
 draw();
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+
+(function(){
+  emailjs.init("YOUR_PUBLIC_KEY");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    .then(function() {
+      alert("Message sent successfully!");
+    }, function(error) {
+      alert("Failed to send message.");
+    });
+});
