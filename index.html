@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"<button id="theme-toggle">Toggle Mode</button>>
+<head>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Ujwal Kumar | Full Stack Developer</title>
+
+<meta name="description" content="Ujwal Kumar - Full Stack Developer skilled in HTML, CSS, JavaScript, React and modern web technologies.">
+
+<meta name="keywords" content="Ujwal Kumar, Web Developer, Full Stack Developer, Portfolio, React Developer">
+
+<meta name="author" content="Ujwal Kumar">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Open Graph for social sharing -->
+<meta property="og:title" content="Ujwal Kumar | Developer Portfolio">
+<meta property="og:description" content="Modern portfolio website of Ujwal Kumar">
+<meta property="og:type" content="website">
+<meta property="og:image" content="profile.jpg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">Ujwal</div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle">🌙</button></li>
+    </ul>
+</nav>
+
+    <header class="hero">
+        <canvas id="particles"></canvas>
+    <div class="hero-content">
+         <img src="myprofile.jpg" alt="Profile Picture">
+    <a href="Ujwal_Kumar_Resume.pdf" download class="resume-btn">Download Resume</a>
+    </div>
+    <div>
+        <h1 class="gradient-text">Ujwal Kumar</h1>
+        <h2>I am a <span class="typing"></span></h2>
+        <p>Building clean and scalable digital experiences.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+       </header>
+<hr>
+    <section id="about" class="secret hidden">
+            <h2>About Me</h2>
+            <p>I build clean and scalable applications.Passionate about problem solving and modern web technologies.</p>
+    </section>
+
+<section class="education">
+        <h2>Education</h2>
+        <div class="card-container">
+<div class="card">
+                <h3>PG diploma</h3>
+                <p>computer application(2024-2026)</p>
+            </div>
+            <div class="card">
+                <h3>Bachelor of science</h3>
+                <p>chemistry honour (2021-2024)</p>
+            </div>
+        </div>
+</section>
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="card-container">
+            <div class="card">HTML</div>
+            <div class="card">CSS</div>
+            <div class="card">Python</div>
+            <div class="card">Java</div>
+            <div class="card">Git</div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <h2>Projects <a href="#" class="btn">View Code</a></h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>Personal responsive portfolio website.</p>
+            </div>
+            <div class="card">
+                <h3>Python Automation</h3>
+                <p>Automation scripts for daily tasks.</p>
+            </div>
+        </div>
+    </section>
+<section id="contact" class="section hidden">
+  <h2>Contact Me</h2>
+  <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+    <footer>
+        <p>© 2026 Ujwal Kumar</p>
+    </footer>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("YOUR_PUBLIC_KEY");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    .then(function() {
+      alert("Message sent successfully!");
+    }, function(error) {
+      alert("Failed to send message.");
+    });
+});
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ujwal Kumar",
+  "url": "https://yourdomain.com",
+  "sameAs": [
+    "https://github.com/yourusername",
+    "https://linkedin.com/in/yourusername"
+  ],
+  "jobTitle": "Full Stack Developer"
+}
+</script>
+</body>
+</html>
