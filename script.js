@@ -61,7 +61,6 @@ function draw(){
 }
 
 draw();
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
 
 (function(){
@@ -78,3 +77,4 @@ document.getElementById("contact-form").addEventListener("submit", function(even
       alert("Failed to send message.");
     });
 });
+
